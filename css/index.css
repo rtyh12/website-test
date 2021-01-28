@@ -1,0 +1,189 @@
+:root {
+    --pink: rgb(255, 0, 221);
+    --dblue: rgb(36, 42, 95);
+}
+
+body {
+    margin          : 0;
+    background-color: var(--pink);
+
+    font-family: 'Manrope', sans-serif;
+    font-size  : 18px;
+
+    background     : linear-gradient(38deg, var(--pink), #00dbff);
+    background-size: 400% 400%;
+
+    -webkit-animation: TopBarAnim 29s ease infinite;
+    -moz-animation   : TopBarAnim 29s ease infinite;
+    animation        : TopBarAnim 29s ease infinite;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0px;
+
+    width      : 100%;
+    height     : 48px;
+    line-height: 48px;
+
+    font-family: 'Manrope', sans-serif;
+    font-size  : 36px;
+
+    /* static gradient */
+    /* background: rgb(255, 0, 254);
+    background: linear-gradient(90deg, rgba(255, 0, 254, 1) 0%, rgba(74, 74, 231, 1) 48%, rgba(0, 212, 255, 1) 100%); */
+
+    /* animated gradient */
+    /* background     : linear-gradient(38deg, #fd00ff, #00dbff);
+    background-size: 400% 400%;
+
+    -webkit-animation: TopBarAnim 29s ease infinite;
+    -moz-animation   : TopBarAnim 29s ease infinite;
+    animation        : TopBarAnim 29s ease infinite; */
+    background: white;
+}
+
+#barlinks a {
+    font-weight  : 200;
+    color        : black;
+    display      : inline-block;
+    /*width      : 100px;*/
+    padding-left : 30px;
+    padding-right: 30px;
+    position     : relative;
+    /* background: rgba(0, 0, 0, 0); */
+    z-index      : 1;
+}
+
+#barlinks a:before {
+    content         : "";
+    position        : absolute;
+    width           : 100%;
+    height          : 24px;
+    bottom          : 2px;
+    left            : 0;
+    background-color: var(--pink);
+    visibility      : hidden;
+    transform       : scaleX(0);
+    transition      : all 0.2s ease-out;
+    z-index         : -1;
+}
+
+#barlinks a:hover:before {
+    visibility: visible;
+    transform : scaleX(0.75);
+}
+
+.bar-message {
+    float        : right;
+    padding-right: 40px;
+}
+
+
+
+.fa-bars {
+    font-size    : 31px;
+    padding-right: 8px;
+    color        : black;
+}
+
+.hamburger {
+    color        : white;
+    padding-right: 6px;
+    padding-left : 20px;
+}
+
+.hamburger:hover i {
+    color     : var(--pink);
+    transition: all 0.2s ease-out;
+}
+
+
+
+#logo {
+    text-decoration: none;
+    font-weight    : 700;
+    color          : black;
+    padding-right  : 10px;
+    padding-left   : 0px;
+}
+
+#logo:hover {
+    color     : var(--pink);
+    transition: all 0.2s ease-out;
+}
+
+.content,
+.content2 {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--dblue);
+    color           : white;
+    border-radius   : 40px;
+    border-bottom-right-radius: 70px;
+    width           : 50%;
+    margin: 20px;
+
+    border: 10px solid transparent;
+}
+
+.content2 {
+    /* float: right; */
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    padding-top: 48px;
+    margin     : auto;
+    max-width  : 1000px;
+}
+
+
+
+#bottom {
+    background-color: white;
+    color           : black;
+}
+
+#bottom-text {
+    padding: 20px;
+    padding-top: 60px;
+    max-width: 1000px;
+    margin:auto;
+}
+
+#bottom a {
+    color: var(--pink);
+    text-decoration: none;
+}
+
+/* animated gradient */
+@-webkit-keyframes TopBarAnim {
+    0%{background-position:84% 0%}
+    50%{background-position:17% 100%}
+    100%{background-position:84% 0%}
+}
+@-moz-keyframes TopBarAnim {
+    0%{background-position:84% 0%}
+    50%{background-position:17% 100%}
+    100%{background-position:84% 0%}
+}
+@keyframes TopBarAnim {
+    0%{background-position:84% 0%}
+    50%{background-position:17% 100%}
+    100%{background-position:84% 0%}
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color     : black;
+    background: var(--pink);
+}
+
+::selection {
+    color     : black;
+    background: var(--pink);
+}
