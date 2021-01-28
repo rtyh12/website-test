@@ -1,5 +1,5 @@
 :root {
-    --pink: rgb(255, 0, 221);
+    --pink: rgb(255, 59, 229);
     --dblue: rgb(36, 42, 95);
 }
 
@@ -7,8 +7,10 @@ body {
     margin          : 0;
     background-color: var(--pink);
 
-    font-family: 'Manrope', sans-serif;
-    font-size  : 18px;
+    font-family: 'Karma', serif;
+
+    font-weight: 300;
+    font-size: 18px;
 
     background     : linear-gradient(38deg, var(--pink), #00dbff);
     background-size: 400% 400%;
@@ -23,11 +25,12 @@ body {
     top: 0px;
 
     width      : 100%;
-    height     : 48px;
-    line-height: 48px;
+    height     : 1.2em;
+    line-height: 1em;
+    padding-top: 0.15em;
 
     font-family: 'Manrope', sans-serif;
-    font-size  : 36px;
+    font-size  : 2em;
 
     /* static gradient */
     /* background: rgb(255, 0, 254);
@@ -40,27 +43,33 @@ body {
     -webkit-animation: TopBarAnim 29s ease infinite;
     -moz-animation   : TopBarAnim 29s ease infinite;
     animation        : TopBarAnim 29s ease infinite; */
+
     background: white;
+    border-bottom-width: 0.1em;
+    border-color: var(--dblue);
+    border-bottom-style: solid;
 }
 
 #barlinks a {
-    font-weight  : 200;
-    color        : black;
-    display      : inline-block;
-    /*width      : 100px;*/
-    padding-left : 30px;
-    padding-right: 30px;
-    position     : relative;
-    /* background: rgba(0, 0, 0, 0); */
-    z-index      : 1;
+    font-weight    : 500;
+    color          : var(--dblue);
+    display        : inline-block;
+    padding-left   : 1.5em;
+    padding-right  : 1.5em;
+    position       : relative;
+    bottom         : 0.3em;
+    z-index        : 1;
+    font-size      : 0.5em;
+    text-decoration: none;
+    text-transform : uppercase;
 }
 
 #barlinks a:before {
     content         : "";
     position        : absolute;
     width           : 100%;
-    height          : 24px;
-    bottom          : 2px;
+    height          : 0.5em;
+    bottom          : 0.4em;
     left            : 0;
     background-color: var(--pink);
     visibility      : hidden;
@@ -82,15 +91,15 @@ body {
 
 
 .fa-bars {
-    font-size    : 31px;
-    padding-right: 8px;
-    color        : black;
+    font-size    : 0.9em;
+    padding-right: 0.3em;
+    color        : var(--dblue);
 }
 
 .hamburger {
     color        : white;
-    padding-right: 6px;
-    padding-left : 20px;
+    padding-right: 0.2em;
+    padding-left : 0.5em;
 }
 
 .hamburger:hover i {
@@ -103,9 +112,10 @@ body {
 #logo {
     text-decoration: none;
     font-weight    : 700;
-    color          : black;
-    padding-right  : 10px;
-    padding-left   : 0px;
+    color          : var(--dblue);
+    padding-right  : 0.5em;
+    padding-left   : 0em;
+    letter-spacing: -0.07em;
 }
 
 #logo:hover {
@@ -115,30 +125,37 @@ body {
 
 .content,
 .content2 {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: var(--dblue);
-    color           : white;
-    border-radius   : 40px;
-    border-bottom-right-radius: 70px;
-    width           : 50%;
-    margin: 20px;
+    /* letter-spacing: 0.08em; */
+    line-height: 1.7em;
+    padding-left              : 1em;
+    padding-right             : 1em;
+    padding-top               : 0.5em;
+    padding-bottom            : 0.5em;
+    background-color          : var(--dblue);
+    color                     : white;
+    border-radius             : 2em;
+    border-bottom-right-radius: 5em;
+    width                     : 50%;
+    margin                    : 1em;
 
-    border: 10px solid transparent;
+    border: 1em solid transparent;
 }
 
 .content2 {
-    /* float: right; */
-    display: flex;
-    flex-direction: row;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .container {
-    padding-top: 48px;
-    margin     : auto;
-    max-width  : 1000px;
+    padding-top   : 2.6em;
+    margin        : auto;
+    max-width     : 1000px;
+}
+
+h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size  : 2em;
+    font-weight: 300;
 }
 
 
@@ -149,10 +166,10 @@ body {
 }
 
 #bottom-text {
-    padding: 20px;
-    padding-top: 60px;
-    max-width: 1000px;
-    margin:auto;
+    padding    : 1em;
+    padding-top: 3em;
+    max-width  : 1000px;
+    margin     : auto;
 }
 
 #bottom a {
